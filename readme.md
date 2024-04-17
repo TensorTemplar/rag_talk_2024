@@ -60,7 +60,7 @@ P(hallucination) increases most when the model has a strong incentive to be help
 
 How to mitigate is still an open research question. Meanwhile practical approaches to add to a RAG pipeline can include:
   1. Probe with simple questions first, e.g. a prompt: `Are you aware of the ollama project? What does the name stand for?` (fact-check)
-  2. Add data into context of your user's prompts. Add instructions with the format and examples to the system prompt or fine-tune on your format. e.g.  `You will be given a context denoted as DATA. Use only these data to answer the QUESTION. If the data are not sufficient to give a high confidence response, elaborate why and ask for clarifications. Example: ...
+  2. Use a system prompt (=internal instructions for model behaviour which instruction-tuned models can understand) or fine-tune on your format. e.g. `You will be given a context denoted as DATA. Use only these data to answer the QUESTION. If the data are not sufficient to give a high confidence response, elaborate why and ask for clarifications. Example: ...`
   3. Check LLM output against an external validation tool, e.g. static type checker, wolfram-alpha for math, domain-specific solvers, or ask it to write code and run it, if you are fearless.
   4. **Constitutional AI** [2](https://arxiv.org/abs/2212.08073) - ask the LLM again to fact-check a previous answer candidate and correct it - this is a workaround for encoder-transformer architecture limitations, since they cannot read their own responses until done. 
   5. Use more expensive and smarter LLMs "reward models", to score the answer of cheaper and narrower LLMs and escalate to slower and larger models if the score is low
