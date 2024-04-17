@@ -95,14 +95,14 @@ What you'll need:
 
 A pipeline to embed various documents into a vector store with semantic search:
 
-![preprocess_pipe](.preprocessing_pipe.png)
+![preprocess_pipe](preprocessing_pipe.png)
 
 
 
 
 Simple document question & answer pipeline:
 
-![qa_from_docs_graph](.qa_from_docs.png)
+![qa_from_docs_graph](qa_from_docs.png)
 
 
 
