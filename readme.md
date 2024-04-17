@@ -88,7 +88,7 @@ mitigate with: fine-tune on examples
 
 What you'll need:
 1. [Ollama](https://hub.docker.com/r/ollama/ollama#!) with an [embedding model](https://ollama.com/library/mxbai-embed-large) and an [instruction tuned LLM](https://ollama.com/library/command-r:35b-v0.1-q4_0) (or OpenAI credits)
-2. Enough VRAM to fit local models. See `tags` on ollama and chose smaller sized ones.
+2. Enough VRAM to fit local models. See `tags` on ollama and choose smaller sized ones.
 3. Python 3.8 and [Haystack](https://haystack.deepset.ai/overview/intro)
 4. two Haystack pipelines - one for storing documents, one for retrieving them and doing Q&A
 
