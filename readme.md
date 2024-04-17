@@ -18,25 +18,25 @@ Who this talk is **NOT** for: Decision makers looking for a turnkey replacement 
 - Increase interpretability downstream 
 - reduce hallucinations
 
-![simple_vs_rag](./References/simple_vs_rag.png)
+![simple_vs_rag](simple_vs_rag.png)
 
 
 #### Sounds complicated, why bother?
 
 1. Reduce question anxiety - see "Friendly online communities"
 
-![chatgpt_knight](./References/chatgpt_knight.jpeg)
+![chatgpt_knight](chatgpt_knight.jpeg)
 
 
 
 2. Search engines in 2024 mostly serve ADs / Affiliate links / whatever was properly SEOed - RAG reduces the amount of spam filtering and can present information according to your task
 
-![Search](References/google.png)
+![Search](google.png)
 
 Same question for [perplexity](http://perplexity.ai):
 
-![RAG](References/RAG.png)
-![RAG2](References/RAG2.png)
+![RAG](RAG.png)
+![RAG2](RAG2.png)
 
 
 
@@ -56,7 +56,7 @@ P(hallucination) increases most when the model has a strong incentive to be help
 
 **Hallucination-Snowballing** [1](https://arxiv.org/abs/2305.13534) Incorrect information, once incorporated into context of a LLM response strongly biases it to stick to it for consistency, even when it knows the answer is false, once prompted. 
 
-![snowball](./References/hallucination_snowball.png)
+![snowball](hallucination_snowball.png)
 
 How to mitigate is still an open research question. Meanwhile practical approaches to add to a RAG pipeline can include:
   1. Probe with simple questions first, e.g. a prompt: `Are you aware of the ollama project? What does the name stand for?` (fact-check)
@@ -95,14 +95,14 @@ What you'll need:
 
 A pipeline to embed various documents into a vector store with semantic search:
 
-![preprocess_pipe](./References/preprocessing_pipe.png)
+![preprocess_pipe](.preprocessing_pipe.png)
 
 
 
 
 Simple document question & answer pipeline:
 
-![qa_from_docs_graph](./References/qa_from_docs.png)
+![qa_from_docs_graph](.qa_from_docs.png)
 
 
 
